@@ -1,0 +1,173 @@
+LUANET PROTECTION LICENSE
+
+Version 0.12
+
+Copyright (C) 2026 Luanet. All Rights Reserved.
+
+Permission to view and use the software is granted only under the terms of this License. By downloading, accessing, copying, or using any portion of the Software, you acknowledge that you have read, understood, and agreed to be bound by this License.
+
+---
+
+PREAMBLE
+
+The Luanet Protection License (LPL) exists to protect the integrity, security, and originality of the Luanet ecosystem.
+
+Unlike open source licenses, this License is designed to prevent unauthorized copying, redistribution, modification, reverse engineering, and misuse of protected Luanet software and related resources.
+
+All intellectual property rights remain exclusively with Luanet and its respective copyright holders.
+
+---
+
+TERMS AND CONDITIONS
+
+1. Definitions
+
+Software refers to all source code, object code, scripts, documentation, assets, libraries, modules, configurations, loaders, Flow components, Dynamic Components, APIs, and any files distributed as part of a Luanet project.
+
+Protected Components refer to any files marked as protected, obfuscated, encrypted, compiled, or otherwise designated by Luanet.
+
+User refers to any individual or organization using the Software.
+
+---
+
+2. Permitted Use
+
+You may:
+
+- Use the Software for personal or authorized commercial purposes.
+- Install the Software on your own systems.
+- Configure settings that are explicitly documented as configurable.
+- Use official APIs and supported extensions.
+
+No ownership of the Software is transferred to you.
+
+---
+
+3. Restrictions
+
+Unless expressly authorized in writing by Luanet, you may NOT:
+
+- Copy protected source code.
+- Steal any portion of the Software.
+- Redistribute the Software.
+- Re-upload official releases.
+- Sell copies of the Software.
+- Remove copyright notices.
+- Claim the Software as your own work.
+- Reverse engineer protected components.
+- Deobfuscate protected files.
+- Crack licensing or authentication systems.
+- Bypass security mechanisms.
+- Inject malicious code into official releases.
+- Modify protected source files.
+- Modify protected configuration files.
+- Modify protected loaders.
+- Modify protected Dynamic Components.
+- Create unauthorized forks.
+- Use the Software for illegal purposes.
+
+---
+
+4. Protected Components
+
+Only files specifically designated as configurable may be modified.
+
+Protected Components must remain exactly as distributed.
+
+Any modification of protected files automatically terminates your rights under this License.
+
+---
+
+5. Anti-Skidding Policy
+
+Copying substantial portions of the Software for another project without prior written permission is strictly prohibited.
+
+This includes:
+
+- Copying source code.
+- Copying project structures.
+- Copying internal algorithms.
+- Copying loaders.
+- Copying Flow Components.
+- Copying Dynamic Components.
+- Copying security systems.
+- Removing attribution.
+
+---
+
+6. Distribution
+
+You may not distribute the Software unless expressly authorized by Luanet.
+
+Official releases may only be distributed through approved channels.
+
+---
+
+7. Ownership
+
+The Software remains the exclusive intellectual property of Luanet.
+
+Nothing in this License transfers copyright, trademark, ownership, or other intellectual property rights.
+
+---
+
+8. Termination
+
+Any violation of this License immediately terminates all rights granted under it.
+
+Upon termination you must immediately:
+
+- Stop using the Software.
+- Delete all copies.
+- Destroy modified copies.
+- Cease redistribution.
+
+---
+
+9. Enforcement
+
+Luanet reserves the right to:
+
+- Suspend or permanently revoke access.
+- Block future updates.
+- Refuse technical support.
+- Remove access to developer services.
+- Report copyright infringement.
+- Pursue legal remedies available under applicable law.
+
+---
+
+10. Disclaimer
+
+The Software is provided "AS IS" without warranty of any kind.
+
+Luanet shall not be liable for damages resulting from the use or inability to use the Software.
+
+---
+
+11. Contact
+
+Questions regarding this License should be directed to the official Luanet development team.
+
+---
+
+12. Private Files and Confidential Materials
+
+All files, source code, scripts, configurations, assets, documentation, and other materials contained within the Luanet project are private and proprietary unless explicitly stated otherwise.
+
+Access to these materials is granted solely for their intended purpose and does not transfer ownership, copyright, or any other intellectual property rights.
+
+Without prior written authorization from Luanet, you may not:
+
+- Download private project files for archival or redistribution purposes.
+- Copy, reproduce, duplicate, or extract any project files.
+- Share, publish, upload, or redistribute any portion of the project.
+- Mirror or host the project on another platform or repository.
+- Use any private files in another project or product.
+- Remove or alter copyright notices, ownership information, or license notices.
+
+Any unauthorized copying, downloading beyond authorized use, reproduction, distribution, disclosure, or misuse of private project materials is considered a material violation of this License. Luanet reserves the right to immediately revoke access, terminate all permissions granted under this License, and pursue any remedies available under applicable law.
+
+---
+
+END OF LUANET PROTECTION LICENSE VERSION 0.12
