@@ -2,9 +2,12 @@ local _env = getgenv()
 local dynamichubfunctions = {}
 local mainDir: string = "https://raw.githubusercontent.com/clientvoidlua/LN-Dynamic"
 local moduleDir: string = mainDir .. "/refs/heads/main/connections/"
-local flyModule = pcall(function()
-	return loadstring(game:HttpGet(moduleDir .. "flyModule.lua"))()
-end) or {}
+
+local flyModule = {}
+pcall(function()
+	flyModule = loadstring(game:HttpGet(moduleDir .. "flyModule.lua"))() or {}
+end)
+
 local MSESP = loadstring(game:HttpGet("https://raw.githubusercontent.com/mstudio45/MSESP/main/source.luau"))()
 
 local VirtualInputManager = game:GetService("VirtualInputManager")
@@ -61,7 +64,6 @@ end
 
 function dynamichubfunctions.ESPPlayers(value: boolean, options: table)
 	_env.DynamicHubEspPlayer = value
-	
 	local config = options or {}
 	
 	MSESP.Config.Player.Enabled  = value
@@ -70,8 +72,7 @@ function dynamichubfunctions.ESPPlayers(value: boolean, options: table)
 	MSESP.Config.Player.Tracer   = if config.Tracer ~= nil then config.Tracer else false
 	MSESP.Config.Player.Chams    = if config.Chams ~= nil then config.Chams else false
 	MSESP.Config.Player.Distance = if config.Distance ~= nil then config.Distance else false
-	
-	MSESP.Config.Player.Color = config.Color or Color3.fromRGB(144, 238, 144)
+	MSESP.Config.Player.Color    = config.Color or Color3.fromRGB(144, 238, 144)
 	
 	MSESP.Toggle(value)
 end
@@ -144,7 +145,6 @@ function dynamichubfunctions.CreateFloor(position: Vector3, collision: boolean, 
 	if collision then
 		local barrierThickness = 1
 		local barrierHeight = 10
-
 		local barrierPositions = {
 			Vector3.new(part.Position.X, part.Position.Y + barrierHeight / 2, part.Position.Z - part.Size.Z / 2 - barrierThickness / 2),
 			Vector3.new(part.Position.X, part.Position.Y + barrierHeight / 2, part.Position.Z + part.Size.Z / 2 + barrierThickness / 2),
@@ -172,8 +172,8 @@ function dynamichubfunctions.SendInChat(msg: string)
 			sayEvent:FireServer(msg, "All")
 		end
 	else
-		local chatInputBar = TextChatService:FindFirstChild("ChatInputBarConfiguration", true)
-		local channel = chatInputBar and chatInputBar.TargetTextChannel
+		local textChannels = TextChatService:FindFirstChild("TextChannels")
+		local channel = textChannels and textChannels:FindFirstChild("RBXGeneral")
 		if channel then
 			channel:SendAsync(msg)
 		end
@@ -212,7 +212,7 @@ end
 
 function dynamichubfunctions.ClickButton(button: GuiButton)
 	local getconnections = _env.getconnections or _env.get_signal_cons
-	if not getconnections then return warn("[Dynamic Hub Error] Execution context missing getconnections") end
+	if not getconnections then return end
 
 	pcall(function()
 		for _, connection in pairs(getconnections(button.MouseButton1Click)) do
@@ -226,7 +226,7 @@ end
 function dynamichubfunctions.FreezePlayer(time: number, sync: boolean)
 	local char = LocalPlayer.Character
 	local root = char and char:FindFirstChild("HumanoidRootPart")
-	if not root then return warn("[Dynamic Hub Error] HumanoidRootPart missing") end
+	if not root then return end
 
 	if not sync then
 		task.spawn(function()
@@ -345,11 +345,11 @@ function dynamichubfunctions.InstantProximityPrompt(value: boolean)
 end
 
 function dynamichubfunctions.Fly(value, speed)
-	if flyModule.flymodel1 then flyModule.flymodel1(value, speed) end
+	if flyModule and flyModule.flymodel1 then flyModule.flymodel1(value, speed) end
 end
 
 function dynamichubfunctions.FlyV2(value, speed)
-	if flyModule.flymodel2 then flyModule.flymodel2(value, speed) end
+	if flyModule and flyModule.flymodel2 then flyModule.flymodel2(value, speed) end
 end
 
 shared.DynamicHubFunction = dynamichubfunctions
