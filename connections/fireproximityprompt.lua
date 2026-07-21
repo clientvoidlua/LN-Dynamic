@@ -1,5 +1,5 @@
 local _env = getgenv()
-local badExecutors = {"Xeno", "Solara", "Wave", "Celery"}
+local badExecutors = {"Xeno", "Solara", "Wave", "Celery"} -- improve your functions xeno skid
 local execName, exeVersion = (_env.identifyexecutor or function() return "Solara", "unknown" end)()
 
 local ProximityPromptService = game:GetService("ProximityPromptService")
@@ -10,7 +10,7 @@ local LocalPlayer = Players.LocalPlayer
 
 if not _env.isFireproximityPrompt then
     _env.isFireproximityPrompt = true
-    warn("[Dynamic Hub] Injecting robust fireproximityprompt framework for: " .. execName)
+    warn("[Dynamic Hub] Injecting fireproximityprompt framework for: " .. execName)
 
     shared.supportSunc = shared.supportSunc or {}
     shared.supportSunc.fireProximityPromptFuncs = shared.supportSunc.fireProximityPromptFuncs or {}
